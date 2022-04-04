@@ -47,7 +47,7 @@ setuptools.setup(
     name=__title__,
     packages=[__title__],
     package_dir={__title__: __title__},
-    url=f"https://github.com/ampledata/{__title__}",
+    url=f"https://github.com/aerial-defence/{__title__}",
     description="Python Team Awareness Kit (PyTAK) Module",
     author="Greg Albrecht",
     author_email="oss@undef.net",
