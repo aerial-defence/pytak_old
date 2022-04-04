@@ -74,22 +74,22 @@ def adsb_to_cot_type(icao_hex: int, category: str = None, flight: str = None) ->
     if flight:
         for dom in pytak.DOMESTIC_AIRLINES:
             if flight.startswith(dom):
-                attitude = "n"
+                attitude = "u"    # Originally "n" (unknown)
 
     tw_start = 0x899000
     tw_end = 0x8993FF
     if tw_start <= icao_int <= tw_end:
-        attitude = "n"
+        attitude = "u"    # Originally "n" (unknown)
 
     civs = ["US-CIV", "CAN-CIV", "NZ-CIV", "AUS-CIV", "UK-CIV"]
     for civ in civs:
         civ_start = pytak.DEFAULT_HEX_RANGES[civ]["start"]
         civ_end = pytak.DEFAULT_HEX_RANGES[civ]["end"]
         if civ_start <= icao_int <= civ_end:
-            attitude = "n"
+            attitude = "u"    # Originally "n" (unknown)
 
     if hex_country_lookup(icao_int):
-        attitude = "n"
+        attitude = "u"    # Originally "n" (unknown)
 
     # Friendly Mil:
     mil = ["US-MIL", "CAN-MIL", "NZ-MIL", "AUS-MIL", "UK-MIL"]
