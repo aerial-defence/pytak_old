@@ -7,7 +7,7 @@ Setup for the Python Team Awareness Kit (PyTAK) Module.
 :author: Greg Albrecht W2GMD <oss@undef.net>
 :copyright: Copyright 2021 Orion Labs, Inc.
 :license: Apache License, Version 2.0
-:source: <https://github.com/ampledata/pytak>
+:source: <https://github.com/aerial-defence/pytak_old>
 """
 
 import os
@@ -15,7 +15,7 @@ import sys
 
 import setuptools
 
-__title__ = "pytak"
+__title__ = "pytak_old"
 __version__ = "3.5.2"
 __author__ = "Greg Albrecht W2GMD <oss@undef.net>"
 __copyright__ = "Copyright 2021 Orion Labs, Inc."
